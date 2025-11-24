@@ -66,15 +66,15 @@ Verás las **ENTRADA/SALIDA** tanto en `server.exe` como gráficamente el ocupam
 
 ### Compilación en Linux/macOS (Método Manual)
 
-### Librería
+**DLL**
 ```
 g++ -std=c++17 -O2 -fPIC -shared parkinglib.cpp -o libparking_ro.so
 ```
-### Servidor (enlazado estático a la so)
+**Servidor**
 ```
 g++ -std=c++17 server.cpp -L. -lparking -o server
 ```
-### Cliente
+**Cliente**
 ```
 g++ -std=c++17 cliente.cpp -o cliente
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
